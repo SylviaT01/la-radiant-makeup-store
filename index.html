@@ -1,11 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>La Radiant Make-up Store</title>
 </head>
+
 <body>
-    
+    <header>
+        <h1>Welcome to La Radiant Makeup Store</h1>
+    </header>
+    <nav>
+        <div class="searchbar">
+            <input type="text" id="searchInput" placeholder="Search Products...">
+        </div>
+        <div class="navbar-items">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+            </ul>
+        </div>
+        <div id="cart-icon">
+            <img src="https://img.icons8.com/ios/50/shopping-cart--v1.png" width="30" height="30" alt="shopping-cart">
+            <span id="cart-badge" class="badge">0</span>
+        </div>
+    </nav>
+    <section id="products">
+        <h2>Featured Products</h2>
+        <div id="product-list"></div>
+    </section>
+    <section>
+        <div><h2>Add Feedback</h2></div>
+        <div id="feedback">
+            <textarea id="feedbackText" cols="30" rows="10" placeholder="Submit your feedback..."></textarea>
+            <button id="submitFeedback">Submit Feedback</button>
+        </div>
+    </section>
+    <footer>
+        <div id="contacts">
+            <p>Contact Us: info@laradiant.com</p>
+        </div>
+        <div>
+            <p>&copy; 2024 La Radiant. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="./script.js"></script>
 </body>
 </html>
