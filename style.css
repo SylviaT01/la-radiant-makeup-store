@@ -5,7 +5,9 @@
     margin: 0;
     padding: 0;
 }
-
+a:hover {
+    background-color: rgb(250, 228, 249);
+  }
 body{
     /* background-image: url(https://img.freepik.com/free-photo/close-up-female-s-hand-holding-baby-s-breath-flowers-against-blue-background_23-2148048411.jpg?t=st=1711010144~exp=1711013744~hmac=820daf3393b1a622008a1b44b1dc0558943363533514b2078f19b7a7c866a2f3&w=740); */
     min-height: 100vh;
@@ -17,7 +19,6 @@ body{
 .hero{
     background-image: url(https://img.freepik.com/premium-photo/beautiful-woman-applying-makeup-powder-cheek-cosmetic-powder-brush-perfect-skin-natural-makeup_265223-81863.jpg?w=740);
     padding: 20px;
-
     border-bottom: 1px solid #eee;
     height: 400px;
     flex-direction: column;
@@ -28,6 +29,10 @@ body{
 }
 #hero h1{
     color: #fff;
+    font-size: x-large;
+}
+#hero p{
+    font-size: large;
 }
 
 nav {
@@ -78,6 +83,10 @@ section div h2{
     font-weight: bold;
     margin: 10px;
     text-align: center;
+}
+
+#product-list div:hover {
+    transform: scale(1.1); /* Scale the div on hover */
 }
 
 #product-list {
