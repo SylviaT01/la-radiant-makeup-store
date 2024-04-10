@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function searchProducts() {
-        const searchTerm = searchInput.value.trim().toLowerCase();
+        const searchTerm = searchInput.value.toLowerCase();
         fetch("http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline")
             .then(response => response.json())
             .then(data => {
@@ -48,38 +48,27 @@ document.addEventListener("DOMContentLoaded", function () {
             button.addEventListener('click', addToCart);
         });
     }
-    // function addToCart(event) {
-    //     const productId = event.target.dataset.productId;
-    //     // Here you can implement the logic to add the product to the cart
-    //     alert(`Product with ID ${productId} added to cart.`);
-    // }
 
     let cartItems = [];
 
-// Function to add a product to the cart
-function addToCart(event) {
-    // Get the product ID from the button's data attribute
-    const productId = event.target.dataset.productId;
-
-    // Add the product ID to the cart
-    cartItems.push(productId);
-
-    // Optional: Update UI to reflect the addition of the product to the cart
-    updateCart();
-
-    // Optional: Show a confirmation message
-    alert(`Product with ID ${productId} added to cart.`);
-}
-
-// Function to update the UI with the cart information
-function updateCart() {
-    // Here you can update the UI to display the cart items count, total price, etc.
-    // For example, you can update a badge in the navbar indicating the number of items in the cart
-    const cartBadge = document.getElementById('cart-badge');
-    if (cartBadge) {
-        cartBadge.textContent = cartItems.length;
+    // Function to add a product to the cart
+    function addToCart(event) {
+        // Get the product ID from the button's data attribute
+        const productId = event.target.dataset.productId;
+        // Add the product ID to the cart
+        cartItems.push(productId);
+        updateCart();
+        alert(`Product with ID ${productId} added to cart.`);
     }
-}
+
+
+    function updateCart() {
+        const cartBadge = document.getElementById('cart-badge');
+        if (cartBadge) {
+            cartBadge.textContent = cartItems.length;
+        }
+    }
+
     function submitFeedback() {
         const feedbackText = feedbackTextArea.value.trim();
         if (feedbackText !== '') {

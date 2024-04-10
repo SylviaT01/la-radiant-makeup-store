@@ -14,24 +14,33 @@ body{
 
 
 }
-header{
-    background-color: #f9f9f9;
+.hero{
+    background-image: url(https://img.freepik.com/premium-photo/beautiful-woman-applying-makeup-powder-cheek-cosmetic-powder-brush-perfect-skin-natural-makeup_265223-81863.jpg?w=740);
     padding: 20px;
-    text-align: center;
+
     border-bottom: 1px solid #eee;
+    height: 400px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
+#hero h1{
+    color: #fff;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
     border-bottom: 1px solid #eee;
 }
 
 #searchInput {
     margin-top: 10px;
     padding: 8px;
-    width: 60%;
     border: 1px solid #ccc;
 }
 .navbar-items ul {
@@ -46,9 +55,8 @@ section div h2{
 #feedback{
     display: flex;
     flex-direction: row;
-    /* align-items: center; */
-    justify-content: space-between;
     margin-top: 10px;
+    gap: 20px;
 }
 
 #feedbackText {
@@ -58,8 +66,8 @@ section div h2{
 }
 #submitFeedback {
     padding: 8px 10px;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #f3c2f1;
+    color: rgb(5, 5, 5);
     border: none;
     cursor: pointer;
     margin-bottom: 30px;
@@ -67,39 +75,52 @@ section div h2{
 }
 #products h2 {
     font-size: medium;
-    font-weight: 700;
+    font-weight: bold;
+    margin: 10px;
+    text-align: center;
 }
 
 #product-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    border-bottom: 1px solid #eee;
+    border: 1px solid #d4d3d3;
 }
 
 #product-list > div {
     margin-top: 10px;
-    width: calc(23.33% - 10px); /* Adjust width as needed */
+    width: calc(23.33% - 10px);
     margin-bottom: 20px;
     padding: 10px;
     border: 1px solid #ccc;
-    box-shadow: 0px 10px 10px 0px black;
+    box-shadow: 0px 10px 10px 0px rgb(129, 128, 128);
     background-color: #fff;
     font-size: small;
     font-weight: normal;
+    border-radius: 8px;
 }
 
 #product-list > div img {
     max-width: 100%;
     height: auto;
 }
+#product-list > div h3{
+    font-size: small;
+    font-weight: 500;
+}
 .add-to-cart{
-    background-color: #91f5f5;
+    background-color: #f8e6f4;
+    padding: 3px;
+}
+#cartBtn{
+    background-color: rgb(243, 225, 243);
+    border-radius: 5px;
+    padding: 5px;
 }
 footer {
     height: 50px;
-    background-color: #acc4c4;
-    color: #fff;
+    background-color: #eccdec;
+    color: #050505;
     text-align: center;
     margin-top: 10px;
     bottom: 0;
@@ -109,4 +130,21 @@ footer {
     justify-content: space-between;
 }
 
-
+.glow {
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
