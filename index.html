@@ -10,6 +10,7 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>La Radiant - Makeup Store</title>
 </head>
 
@@ -29,21 +30,24 @@
         </div>
         <div id="cart-icon">
             <button id="cartBtn">
-            <img src="https://img.icons8.com/ios/50/shopping-cart--v1.png" width="30" height="30" alt="shopping-cart">
-            <span id="cart-badge" class="badge">0</span>
-        </button>
-    </div>
+                <img src="https://img.icons8.com/ios/50/shopping-cart--v1.png" width="30" height="30"
+                    alt="shopping-cart">
+                <span id="cart-badge" class="badge">0</span>
+            </button>
+        </div>
     </nav>
     <section id="hero" class="hero">
-            <h1>Welcome to La Radiant Makeup Store</h1>
-            <p class="glow"><em>Hello ❤️ gorgeous.You glow here!</em></p>
+        <h1>Welcome to La Radiant Makeup Store</h1>
+        <p class="glow"><em>Hello ❤️ gorgeous.You glow here!</em></p>
     </section>
     <section id="products">
         <h2>Products</h2>
         <div id="product-list"></div>
     </section>
     <section>
-        <div><h2>Add Feedback</h2></div>
+        <div>
+            <h2>Add Feedback</h2>
+        </div>
         <div id="feedback" class="feedback">
             <textarea id="feedbackText" cols="30" rows="10" placeholder="Submit your feedback..."></textarea>
             <button id="submitFeedback">Submit Feedback</button>
@@ -51,7 +55,14 @@
     </section>
     <footer>
         <div id="contacts">
-            <p>Contact Us: info@laradiant.com</p>
+            <p><i class="fas fa-envelope email-icon"></i>
+                <a href="mailto:info@laradiant.com">info@laradiant.com</a>
+            </p>
+            <p> <i class="fas fa-phone phone-icon"></i>
+                <a href="tel:+1234567890">+254718081920</a>
+            </p>
+            <p><i class="fas fa-map-marker-alt location-icon"></i>
+                Ruiru, Kenya</p>
         </div>
         <div>
             <p>&copy; 2024 La Radiant. All rights reserved.</p>
@@ -59,4 +70,5 @@
     </footer>
     <script src="./script.js"></script>
 </body>
+
 </html>

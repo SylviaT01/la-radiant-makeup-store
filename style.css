@@ -56,34 +56,50 @@ nav {
 section div h2{
     font-size: medium;
     font-weight: 700;
-}
-#feedback{
-    display: flex;
-    flex-direction: row;
-    margin-top: 10px;
-    gap: 20px;
+    text-align: center;
+    margin: 10px;
 }
 
-#feedbackText {
-    width: 80%;
-    height: 35px;
+.feedback {
+    margin-top: 10px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  #feedbackText {
+    width: 100%;
+    padding: 10px;
     margin-bottom: 10px;
-}
-#submitFeedback {
-    padding: 8px 10px;
-    background-color: #f3c2f1;
-    color: rgb(5, 5, 5);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 40px;
+    resize: none; 
+  }
+
+  #submitFeedback {
+    padding: 10px 10px;
+    background-color: #f784e7; 
+    color: #fff;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
-    margin-bottom: 30px;
-    margin-top: 0;
-}
-#products h2 {
+    transition: background-color 0.3s ease;
+  }
+
+  #submitFeedback:hover {
+    background-color: #f775d6; 
+  }
+
+  #products h2 {
     font-size: medium;
     font-weight: bold;
     margin: 10px;
     text-align: center;
-}
+} 
+
 
 #product-list div:hover {
     transform: scale(1.1); /* Scale the div on hover */
@@ -126,8 +142,26 @@ section div h2{
     border-radius: 5px;
     padding: 5px;
 }
+
+.fa {
+    margin-right: 5px; 
+    color: #333; 
+  }
+
+  .phone-icon {
+    color: rgb(115, 124, 248); 
+  }
+
+  .email-icon {
+    color: green; 
+  }
+
+  .location-icon {
+    color: red; 
+  }
+
 footer {
-    height: 50px;
+    height: 80px;
     background-color: #eccdec;
     color: #050505;
     text-align: center;
