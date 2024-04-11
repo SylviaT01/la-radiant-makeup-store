@@ -101,15 +101,25 @@ document.addEventListener("DOMContentLoaded", function () {
                     cartProducts.forEach(product => {
                         const productContainer = document.createElement('div');
                         productContainer.innerHTML = `
+                        <div class="product-item">
                         <img src="${product.image_link}" alt="${product.name}" style="max-width: 100px; max-height: 100px;">
                         <p>Name: ${product.name}</p>
                         <p>Brand: ${product.brand}</p>
                         <p>Price: ${product.price}USD</p>
-                        <hr>
+                        <button class="remove-btn">Remove</button>
+                        </div>
                     `;
                         document.getElementById('product-info').appendChild(productContainer);
                     });
 
+                    document.getElementById('product-info').addEventListener('click', function (event) {
+                        if (event.target && event.target.classList.contains('remove-btn')) {
+                            // Find the index of the product container
+                            const productItem = event.target.closest('.product-item');
+                            const index = Array.from(productItem.parentNode.children).indexOf(productItem);
+                            removeProductFromCart(index);
+                        }
+                    });
                     // Display modal
                     const modal = document.getElementById("myModal");
                     modal.style.display = "block";
@@ -134,6 +144,12 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     }
 
+    // Function to remove a product from the cart
+    function removeProductFromCart(index) {
+        cartItems.splice(index, 1);
+        updateCart();
+        showCart(); // Re-render the cart modal
+    }
 
     function submitFeedback() {
         const feedbackText = feedbackTextArea.value.trim();

@@ -192,7 +192,7 @@ footer {
     }
   }
 
-  /* Modal styles */
+
 .modal {
     display: none; 
     position: fixed; 
@@ -226,7 +226,6 @@ footer {
     text-decoration: none;
     cursor: pointer;
 }
-
 
 #product-info img {
     display: block;
