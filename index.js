@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Fetch the products from the Makeup API based on the product IDs in the cartItems array
         const productIds = cartItems.join(',');
-        const apiUrl = `http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline&product_id=${productIds}`;
+        const apiUrl = `https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline&product_id=${productIds}`;
 
         fetch(apiUrl)
             .then(response => response.json())
