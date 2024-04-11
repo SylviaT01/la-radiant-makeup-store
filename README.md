@@ -21,13 +21,16 @@ The project includes a basic HTML structure, CSS styling, and some JavaScript fu
 - HTML
 - CSS
 - JavaScript
+## Live link
+The project is live at (https://la-radiant-makeup-store.vercel.app/)
 ## Requirements
 - Programming knowledge, HTML and JavaScript
 - Visual Studio as code editor
 - Vercel for deployment purposes
-## Contributing
+## Contributions
 Contributions to my project are welcome. Email me at [Sylvia Chebet][sylviachebet03@gmail.com]
 ## Author
 Created by [Sylvia Chebet].
-
+## Copyright and License information
+The project is licensed under [MIT License](LICENSE)
 
