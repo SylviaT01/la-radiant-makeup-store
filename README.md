@@ -26,7 +26,7 @@ The project includes a basic HTML structure, CSS styling, and some JavaScript fu
 - Visual Studio as code editor
 - Vercel for deployment purposes
 ## Contributing
-Contributions to my project are welcome. Email me at [Sylvia Chebet](sylviachebet03@gmail.com)
+Contributions to my project are welcome. Email me at [Sylvia Chebet][sylviachebet03@gmail.com]
 ## Author
 Created by [Sylvia Chebet].
 
