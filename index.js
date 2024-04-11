@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     fetchProducts();
 
     function fetchProducts() {
-        fetch("http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline")
+        fetch("https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline")
             .then(response => response.json())
             .then(data => {
                 displayProducts(data);
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function searchProducts() {
         const searchTerm = searchInput.value.toLowerCase();
-        fetch("http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline")
+        fetch("https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline")
             .then(response => response.json())
             .then(data => {
                 const filteredProducts = data.filter(product => product.name.toLowerCase().includes(searchTerm));
