@@ -69,6 +69,72 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // Function to handle click event on the cart button
+    document.getElementById('cartBtn').addEventListener('click', showCart);
+
+    // Function to display the products in the cart
+    function showCart() {
+        // Check if there are any products in the cart
+        if (cartItems.length === 0) {
+            alert("Your cart is empty.");
+            return;
+        }
+
+        // Fetch the products from the Makeup API based on the product IDs in the cartItems array
+        const productIds = cartItems.join(',');
+        const apiUrl = `http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline&product_id=${productIds}`;
+
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                // Filter the products to include only those in the cart
+                const cartProducts = data.filter(product => cartItems.includes(product.id.toString()));
+
+                // Display the products in the cart
+                if (cartProducts.length === 0) {
+                    alert("No products found in your cart.");
+                } else {
+                    // Clear previous content
+                    document.getElementById('product-info').innerHTML = '';
+
+                    // Populate modal with product information
+                    cartProducts.forEach(product => {
+                        const productContainer = document.createElement('div');
+                        productContainer.innerHTML = `
+                        <img src="${product.image_link}" alt="${product.name}" style="max-width: 100px; max-height: 100px;">
+                        <p>Name: ${product.name}</p>
+                        <p>Brand: ${product.brand}</p>
+                        <p>Price: ${product.price}USD</p>
+                        <hr>
+                    `;
+                        document.getElementById('product-info').appendChild(productContainer);
+                    });
+
+                    // Display modal
+                    const modal = document.getElementById("myModal");
+                    modal.style.display = "block";
+
+                    // Close modal when the close button is clicked
+                    const closeButton = document.getElementsByClassName("close")[0];
+                    closeButton.onclick = function () {
+                        modal.style.display = "none";
+                    }
+
+                    // Close modal when clicked outside of the modal
+                    window.onclick = function (event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching products:', error);
+                alert("Error fetching products. Please try again later.");
+            });
+    }
+
+
     function submitFeedback() {
         const feedbackText = feedbackTextArea.value.trim();
         if (feedbackText !== '') {
